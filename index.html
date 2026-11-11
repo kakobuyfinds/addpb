@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>BoonBuy spreadsheet | Sko, størrelser og QC-billeder</title>
+  <meta name="description" content="Brug denne danske BoonBuy spreadsheet-guide til at sammenligne produktlinks, tjekke størrelser og QC-billeder og beregne den samlede pris før køb.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="da_DK">
+  <meta property="og:title" content="BoonBuy spreadsheet | Sko, størrelser og QC-billeder">
+  <meta property="og:description" content="En dansk guide til produktlinks, pasform, varekontrol og fragt til Danmark.">
+  <style>
+    :root{color-scheme:light;--paper:#f5f1e8;--ink:#192c30;--muted:#465c60;--line:#bdc7c0;--wash:#e6ece3;--accent:#983820}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    .wrap{width:min(100% - 2rem,69rem);margin-inline:auto}
+    header,footer{border-block-end:1px solid var(--line);padding-block:1rem}
+    footer{border-block:1px solid var(--line) 0;margin-top:3rem}
+    a{color:var(--accent);text-underline-offset:.18em}
+    :focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+    .brand{font-weight:750;color:var(--ink)}
+    h1,h2,h3{line-height:1.13;margin:0 0 .65rem}
+    h1,h2{font-family:Georgia,serif}
+    h1{font-size:clamp(2.5rem,6vw,5rem);letter-spacing:-.055em;overflow-wrap:anywhere}
+    h2{font-size:clamp(1.7rem,4vw,2.55rem)}
+    h3{font-size:1.16rem}
+    p{margin:0 0 .85rem}
+    .hero{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(1rem,4vw,3rem);align-items:center;padding-block:clamp(1.7rem,5vw,3.75rem)}
+    figure{margin:0}
+    img{display:block;width:100%;height:auto;background:var(--wash)}
+    .hero img{aspect-ratio:4/3;object-fit:contain;background:#fff;border-radius:.55rem}
+    figcaption,small{color:var(--muted);font-size:.875rem}
+    figcaption{padding-top:.35rem}
+    .cta{display:inline-block;padding:.65rem 1rem;background:var(--ink);color:white;border-radius:.3rem;font-weight:700}
+    .categories{padding:1.1rem;background:var(--wash);border-radius:.55rem}
+    .categories ul{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));list-style:none;padding:0;margin:0;gap:.5rem}
+    .categories a{display:flex;align-items:center;min-height:3.2rem;padding:.48rem .65rem;background:var(--paper);border:1px solid var(--line);border-radius:.25rem;color:var(--ink);font-weight:650;overflow-wrap:anywhere}
+    .section{margin-top:clamp(2rem,6vw,4rem)}
+    .gallery,.guides{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+    .gallery{grid-template-columns:repeat(5,minmax(0,1fr))}
+    .gallery img{aspect-ratio:1;object-fit:contain;background:#fff;border-radius:.4rem}
+    .guides article{border-top:3px solid var(--accent);padding-top:1rem}
+    .faq{max-width:52rem}
+    details{border-top:1px solid var(--line);padding:.8rem 0}
+    details:last-child{border-bottom:1px solid var(--line)}
+    details p{margin:.55rem 0 0}
+    summary{cursor:pointer;font-weight:700;padding:.15rem 0}
+    @media(max-width:760px){.categories ul,.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:540px){.hero,.guides{grid-template-columns:1fr}.categories ul,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "da",
+    "name": "BoonBuy spreadsheet | Sko, størrelser og QC-billeder",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hvad er et BoonBuy spreadsheet?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Det er en oversigt, hvor du kan organisere og sammenligne produktlinks. Denne danske guide forklarer, hvordan du bruger en sådan oversigt. Kategorilinkene åbner Hipobuyfind."}
+      },
+      {
+        "@type": "Question",
+        "name": "Hvordan tjekker jeg, om et produktlink stadig virker?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Åbn den oprindelige vareannonce, og sammenlign produkt-ID, sælger, farve og størrelse med dine noter. Vælg den ønskede variant for at se, om den stadig kan bestilles."}
+      },
+      {
+        "@type": "Question",
+        "name": "Hvad kan QC-billeder fortælle mig?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Kvalitetskontrolbilleder kan hjælpe dig med at vurdere synlige detaljer som syninger, tryk og mål. Brug billeder af den konkrete vare, og bed om et nærbillede, hvis en detalje er uklar."}
+      },
+      {
+        "@type": "Question",
+        "name": "Hvordan beregner jeg den samlede pris til Danmark?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Læg varepris, eventuel lokal fragt, agentgebyrer, international fragt og eventuelle importomkostninger sammen. Omregn beløbene til DKK med den kurs, du faktisk får ved betaling."}
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/addpb/">
+</head>
+<body>
+  <header>
+    <div class="wrap"><a class="brand" href="https://www.hipobuyfind.com">hipobuyfind.com</a></div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <h1>BoonBuy spreadsheet</h1>
+        <p>Et BoonBuy spreadsheet samler produktlinks, så du kan sammenligne modeller, størrelser og varianter. Brug guiden til at lave en kortliste, tjekke billeder fra kvalitetskontrol (QC) og regne den samlede pris ud, før du vælger.</p>
+        <a class="cta" href="https://www.hipobuyfind.com">Se kataloget hos Hipobuyfind</a>
+      </div>
+      <figure>
+        <img src="https://www.tike.gr/files/images/products/media/CW2/CW2288-111/images/CW2288-111.jpg.webp" width="640" height="480" fetchpriority="high" alt="Hvid Nike Air Force 1 ’07 set fra siden">
+        <figcaption>Nike Air Force 1 ’07 · stilreference</figcaption>
+      </figure>
+    </section>
+    <nav class="categories" aria-labelledby="kategorier">
+      <h2 id="kategorier">Varekategorier</h2>
+      <ul>
+        <li><a href="https://hipobuyfind.com/category-911-Shoes.html">Sko</a></li>
+        <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Hættetrøjer og strik</a></li>
+        <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-shirts</a></li>
+        <li><a href="https://hipobuyfind.com/category-914-Jackets.html">Jakker</a></li>
+        <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Bukser og shorts</a></li>
+        <li><a href="https://hipobuyfind.com/category-916-Headwear.html">Kasketter og huer</a></li>
+        <li><a href="https://hipobuyfind.com/category-917-Sets.html">Sæt</a></li>
+        <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Undertøj</a></li>
+        <li><a href="https://hipobuyfind.com/category-919-Jersey.html">Sportstrøjer</a></li>
+        <li><a href="https://hipobuyfind.com/category-920-Accessories.html">Tilbehør</a></li>
+      </ul>
+    </nav>
+    <section class="section" aria-labelledby="guide">
+      <h2 id="guide">BoonBuy købsguide</h2>
+      <div class="guides">
+        <article>
+          <h3>Find og gem BoonBuy produktlinks</h3>
+          <p>Skriv produkt-ID, sælgernavn og dato for seneste tjek i din kortliste. Når du sammenligner Weidian-, Taobao- eller 1688-links, så åbn originalannoncen og vælg den konkrete farve og størrelse. Tjek variantens pris og lagerstatus igen, hvis du har gemt linket tidligere.</p>
+          <p>Ved ens billeder fra flere sælgere kan du sammenligne materialebeskrivelser og returvilkår. Gem gerne et skærmbillede af den variant, du vælger, så du har noget at sammenligne med, hvis varen afviger.</p>
+        </article>
+        <article>
+          <h3>Læs størrelsesguiden og tjek QC-billeder</h3>
+          <p>Brug indvendig skolængde i centimeter sammen med sælgerens EU-størrelsestabel. For en hættetrøje eller jakke kan du måle brystbredde, ryglængde og ærmelængde på en trøje, du allerede bruger. Ved bukser er taljevidde og indvendig benlængde gode steder at starte.</p>
+          <p>Se efter skæve syninger, trykkets placering og størrelsesmærket på lagerbillederne. Bed om et foto med målebånd, hvis du er i tvivl om et mål. Tjek returfristen hos sælgeren eller agenten, før du godkender varen til afsendelse.</p>
+        </article>
+        <article>
+          <h3>Sammenlign BoonBuy-fragt til Danmark</h3>
+          <p>Notér varepris i CNY, eventuel fragt til lageret, agentgebyrer og kursen ved betaling. Sammenlign fragtlinjer på både faktisk pakkevægt og volumenvægt, hvis fragtselskabet bruger pakkens mål til at beregne prisen.</p>
+          <p>Se efter sporing og eventuel transportforsikring. Hvis du overvejer at samle flere varer, så sammenlign den samlede pris i danske kroner for én pakke med prisen for separate pakker. Medregn eventuel moms, told og transportørens håndteringsgebyr.</p>
+        </article>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="stil">
+      <h2 id="stil">Stilreferencer til tøj og tilbehør</h2>
+      <p>Brug billederne til at sammenligne silhuet, materialer og detaljer. De viser stilreferencer. Tjek det aktuelle udvalg i kataloget.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://static.nike.com/a/images/t_web_pdp_936_v2/f_auto%2Cu_9ddf04c7-2a9a-4d76-add1-d15af8f0263d%2Cc_scale%2Cfl_relative%2Cw_1.0%2Ch_1.0%2Cfl_layer_apply/2af74814-9b8c-44c3-8ba9-d08ef0fe0ca1/M%2BNK%2BCLUB%2BBB%2BPO%2BHOODIE.png" width="400" height="400" loading="lazy" decoding="async" alt="Model i rød Nike Club-hættetrøje med kængurulomme">
+          <figcaption>Nike · hættetrøje</figcaption>
+        </figure>
+        <figure>
+          <img src="https://tw.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-lv-safari-bb-bandeau--M97877_PM1_Cropped%20worn%20view.png?hei=400&amp;wid=400" width="400" height="400" loading="lazy" decoding="async" alt="Louis Vuitton Speedy-taske med mønstret silkebånd om hanken">
+          <figcaption>Louis Vuitton · taske</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Beige og brun Gucci-kasket i GG-lærred">
+          <figcaption>Gucci · kasket</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.hermes.com/is/image/hermesproduct/%E3%82%AB%E3%83%AC-90-%E3%80%8A%E3%81%99%E3%81%B9%E3%81%A6%E3%81%AF%E9%9E%8D%E3%81%AE%E4%B8%AD%E3%81%AB%E3%80%8B--004204S%2001-flat-wm-3-0-0-800-800_g.jpg" width="800" height="800" loading="lazy" decoding="async" alt="Hermès Carré 90-silketørklæde med orange kant og sadelmotiver">
+          <figcaption>Hermès · silketørklæde</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.christiandior.com/is/image/diorprod/B1723HOMLED004_E01?%24default_GHC%24=&amp;bfc=on&amp;crop=316%2C659%2C1283%2C751&amp;qlt=85&amp;wid=400" width="400" height="234" loading="lazy" decoding="async" alt="Sort Dior CD Icon-læderarmbånd med sølvfarvet spænde">
+          <figcaption>Dior · armbånd</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="section faq" aria-labelledby="faq">
+      <h2 id="faq">Ofte stillede spørgsmål</h2>
+      <details open>
+        <summary>Hvad er et BoonBuy spreadsheet?</summary>
+        <p>Det er en oversigt, hvor du kan organisere og sammenligne produktlinks. Denne danske guide forklarer, hvordan du bruger en sådan oversigt. Kategorilinkene åbner Hipobuyfind.</p>
+      </details>
+      <details>
+        <summary>Hvordan tjekker jeg, om et produktlink stadig virker?</summary>
+        <p>Åbn den oprindelige vareannonce, og sammenlign produkt-ID, sælger, farve og størrelse med dine noter. Vælg den ønskede variant for at se, om den stadig kan bestilles.</p>
+      </details>
+      <details>
+        <summary>Hvad kan QC-billeder fortælle mig?</summary>
+        <p>Kvalitetskontrolbilleder kan hjælpe dig med at vurdere synlige detaljer som syninger, tryk og mål. Brug billeder af den konkrete vare, og bed om et nærbillede, hvis en detalje er uklar.</p>
+      </details>
+      <details>
+        <summary>Hvordan beregner jeg den samlede pris til Danmark?</summary>
+        <p>Læg varepris, eventuel lokal fragt, agentgebyrer, international fragt og eventuelle importomkostninger sammen. Omregn beløbene til DKK med den kurs, du faktisk får ved betaling.</p>
+      </details>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap"><small>Dansk indkøbsguide. Mærkerne på billederne er vist som stilreferencer.</small></div>
+  </footer>
+</body>
+</html>
